@@ -1,13 +1,17 @@
-# Jarad DeLorenzo
+# <img src="img/pixel_me/479.png" alt="Jarad DeLorenzo" width="100" style="vertical-align: middle;"> Jarad DeLorenzo
 ## 👨‍💻 Staff Engineer | 🚀 Tech Innovator | 🤖 AI Enthusiast
 
 [![Visits Badge](https://badges.pufler.dev/visits/pujux/badge-it)](https://badges.pufler.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/delorenj/)
+[![Medium](https://img.shields.io/badge/Medium-Follow-blue)](https://medium.com/@delorenj)
+[![Mastodon](https://img.shields.io/badge/Mastodon-Follow-blue)](https://mastodon.instance/@delorenj)
+[![X](https://img.shields.io/badge/X-Follow-blue)](https://x.com/CodeNDagger)
+[![Substack](https://img.shields.io/badge/Substack-Follow-blue)](https://delorenj.substack.com)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:jaradd@gmail.com)
 
 ### 🌟 About Me
 
-Innovative Staff Engineer with 20+ years of experience driving technical excellence and delivering high-impact solutions. Currently spearheading AI developer workflow tools, integrations and microservices architecture at Justworks.
+I'm a Staff Engineer with 20+ years of experience driving technical excellence and delivering high-impact solutions. Currently spearheading AI developer workflow tools, integrations and microservices architecture @[Justworks](https://justworks.com) in downtown NYC.
 
 - 🏗️ Expert in Software Architecture & System Design
 - 🌐 Microservices & Distributed Systems
@@ -48,45 +52,50 @@ Innovative Staff Engineer with 20+ years of experience driving technical excelle
 
 ### 🚀 Career Highlights
 
-- 🏢 **Justworks**: 
+<img src="https://cdn.brandfetch.io/justworks.com/logo/theme/dark/fallback/lettermark/h/100/w/100" />
+
+
   - Architected multiple microservices in the Workforce Management and Time & Attendance space
   - Spearheaded the development of AI-powered developer workflows and integrations
-- 🎉 **Splash**: Led successful transition to microservices architecture
-- 🏋️ **ClassPass**: Built and led a team that managed to launch and grow ClassPass to a billion-dollar valuation
-- 👓 **Warby Parker**: Pioneered Computer Vision initiatives for virtual try-on experiences and AI-powered biometric analysis
+
+<img src="https://cdn.brandfetch.io/splashthat.com/logo/theme/dark/fallback/lettermark/h/90/w/90" />  
+
+- Led successful transition to microservices architecture
+Led successful transition to microservices architecture
+
+<img src="https://cdn.brandfetch.io/classpass.com/logo/theme/dark/fallback/lettermark/h/140/w/140" />
+
+  - Built and led a team that managed to launch and grow ClassPass to a billion-dollar valuation
+
+<img src="https://cdn.brandfetch.io/warbyparker.com/logo/theme/dark/fallback/lettermark/h/140/w/140" />
+
+  - Pioneered Computer Vision initiatives for virtual try-on experiences and AI-powered biometric analysis
 
 ### 📚 Education
 
 - 🎓 M.S. Software Engineering, Stevens Institute of Technology
 - 🎓 B.S. Computer Science & B.S. Mathematics, Drexel University
 
-### 📝 Latest Blog Posts
 
-- [Revolutionizing Engineering Workflows with AI: A Personal Journey](https://example.com/blog1)
-- [Technology-Push Innovation: Discovering LLM Applications in Dev Workflows](https://example.com/blog2)
-
-### 📊 GitHub Stats
-
-![Jarad's GitHub stats](https://github-readme-stats.vercel.app/api?username=delorenj&show_icons=true&theme=radical)
-
-### 🌟 Featured Projects
+### 🌟 Open Source Projects
 
 
 <img src="https://delorenj.github.io/did-stuff/did-stuff-hero-dark.png" alt="Did Stuff" width="100%">
 
-### DidStuff: AI-Powered Git Commit Messages
+### DidStuff
+[https://github.com/delorenj/did-stuff](https://github.com/delorenj/did-stuff)
 
    A CLI tool that adds AI-generated commit messages to your git repositories.
-   - Tech: Python, Poetry, OpenAI API, AWS Bedrock
-   - [Repository](https://github.com/delorenj/did-stuff)
-<hr>
+   
 
-<img src="https://delorenj.github.io/prompt-and-tag/prompt-and-tag-logo.png" alt="Prompt & Tag" width="100%">
+<img src="prompt-and-tag/banner.png" alt="Prompt & Tag" width="100%">
 
-### Prompt & Tag: Context Versioning for LLMs
+### Prompt & Tag
+
+[https://github.com/delorenj/prompt-and-tag](https://github.com/delorenj/prompt-and-tag)
+
    Easily version, tag, and share your context windows across LLM providers.
-   - Tech: Python, Make, Git
-   - [Repository](https://github.com/delorenj/prompt-and-tag)
+
 
 ### 🤝 Let's Connect!
 
