@@ -4,7 +4,7 @@
 [![Visits Badge](https://badges.pufler.dev/visits/pujux/badge-it)](https://badges.pufler.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/delorenj/)
 [![Medium](https://img.shields.io/badge/Medium-Follow-blue)](https://medium.com/@delorenj)
-[![Mastodon](https://img.shields.io/badge/Mastodon-Follow-blue)](https://mastodon.instance/@delorenj)
+<a rel="me" href="https://me.dm/@delorenj"><img src="https://img.shields.io/badge/Mastodon-Follow-blue" alt="Mastodon"></a>
 [![X](https://img.shields.io/badge/X-Follow-blue)](https://x.com/CodeNDagger)
 [![Substack](https://img.shields.io/badge/Substack-Follow-blue)](https://delorenj.substack.com)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:jaradd@gmail.com)
