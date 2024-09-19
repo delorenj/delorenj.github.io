@@ -1,6 +1,38 @@
-title: Jarad DeLorenzo
-description: I live here.
-remote_theme: pages-themes/cayman@v0.2.0
-show_downloads: false
+# Theme settings
+theme: jekyll-theme-primer
+markdown: kramdown
+
+# Use the new layout
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
+# Site settings
+title: "Jarad DeLorenzo - Staff Engineer"
+description: "Staff Engineer | Tech Innovator | AI Enthusiast"
+
+# GitHub metadata
+repository: delorenj/delorenj.github.io
+
+# Plugins
 plugins:
-- jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Enable kramdown GFM parser
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

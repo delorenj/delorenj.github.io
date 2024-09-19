@@ -9,6 +9,7 @@
 [![Substack](https://img.shields.io/badge/Substack-Follow-blue)](https://delorenj.substack.com)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:jaradd@gmail.com)
 
+<!-- {:.section-transition} -->
 ### 🌟 About Me
 
 I'm a Staff Engineer with 20+ years of experience driving technical excellence and delivering high-impact solutions. Currently spearheading AI developer workflow tools, integrations and microservices architecture @[Justworks](https://justworks.com) in downtown NYC.
@@ -19,6 +20,7 @@ I'm a Staff Engineer with 20+ years of experience driving technical excellence a
 - 🤖 AI and Agentic workflows strategist
 - 👥 Passionate about Technical Leadership & Mentoring
 
+<!-- {:.section-transition} -->
 ### 🛠️ Tech Stack
 
 ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
@@ -49,54 +51,92 @@ I'm a Staff Engineer with 20+ years of experience driving technical excellence a
 ![Langchain](https://img.shields.io/badge/-Langchain-000000?style=flat-square&logo=langchain&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/-Anthropic-000000?style=flat-square&logo=anthropic&logoColor=white)
 
-
+<!-- {:.section-transition} -->
 ### 🚀 Career Highlights
 
-<img src="https://cdn.brandfetch.io/justworks.com/logo/theme/dark/fallback/lettermark/h/100/w/100" />
+<!-- {:.grid.grid-cols-1.md:grid-cols-2.gap-6} -->
+<div>
 
+<!-- {:.bg-gray-100.dark:bg-gray-800.p-4.rounded-lg} -->
+<div>
 
-  - Architected multiple microservices in the Workforce Management and Time & Attendance space
-  - Spearheaded the development of AI-powered developer workflows and integrations
+![Justworks](https://cdn.brandfetch.io/justworks.com/logo/theme/dark/fallback/lettermark/h/100/w/100)
 
-<img src="https://cdn.brandfetch.io/splashthat.com/logo/theme/dark/fallback/lettermark/h/90/w/90" />  
+- Architected multiple microservices in the Workforce Management and Time & Attendance space
+- Spearheaded the development of AI-powered developer workflows and integrations
+
+</div>
+
+<!-- {:.bg-gray-100.dark:bg-gray-800.p-4.rounded-lg} -->
+<div>
+
+![Splash](https://cdn.brandfetch.io/splashthat.com/logo/theme/dark/fallback/lettermark/h/90/w/90)
 
 - Led successful transition to microservices architecture
-Led successful transition to microservices architecture
 
-<img src="https://cdn.brandfetch.io/classpass.com/logo/theme/dark/fallback/lettermark/h/140/w/140" />
+</div>
 
-  - Built and led a team that managed to launch and grow ClassPass to a billion-dollar valuation
+<!-- {:.bg-gray-100.dark:bg-gray-800.p-4.rounded-lg} -->
+<div>
 
-<img src="https://cdn.brandfetch.io/warbyparker.com/logo/theme/dark/fallback/lettermark/h/140/w/140" />
+![ClassPass](https://cdn.brandfetch.io/classpass.com/logo/theme/dark/fallback/lettermark/h/140/w/140)
 
-  - Pioneered Computer Vision initiatives for virtual try-on experiences and AI-powered biometric analysis
+- Built and led a team that managed to launch and grow ClassPass to a billion-dollar valuation
 
+</div>
+
+<!-- {:.bg-gray-100.dark:bg-gray-800.p-4.rounded-lg} -->
+<div>
+
+![Warby Parker](https://cdn.brandfetch.io/warbyparker.com/logo/theme/dark/fallback/lettermark/h/140/w/140)
+
+- Pioneered Computer Vision initiatives for virtual try-on experiences and AI-powered biometric analysis
+
+</div>
+
+</div>
+
+<!-- {:.section-transition} -->
 ### 📚 Education
 
 - 🎓 M.S. Software Engineering, Stevens Institute of Technology
 - 🎓 B.S. Computer Science & B.S. Mathematics, Drexel University
 
-
+<!-- {:.section-transition} -->
 ### 🌟 Open Source Projects
 
+<!-- {:.grid.grid-cols-1.md:grid-cols-2.gap-6} -->
+<div>
 
-<img src="https://delorenj.github.io/did-stuff/did-stuff-hero-dark.png" alt="Did Stuff" width="100%">
+<!-- {:.bg-white.dark:bg-gray-800.rounded-lg.shadow-md.overflow-hidden} -->
+<div>
 
-### DidStuff
-[https://github.com/delorenj/did-stuff](https://github.com/delorenj/did-stuff)
+![Did Stuff](https://delorenj.github.io/did-stuff/did-stuff-hero-dark.png)
 
-   A CLI tool that adds AI-generated commit messages to your git repositories.
-   
+#### DidStuff
 
-<img src="prompt-and-tag/banner.png" alt="Prompt & Tag" width="100%">
+A CLI tool that adds AI-generated commit messages to your git repositories.
 
-### Prompt & Tag
+[View on GitHub](https://github.com/delorenj/did-stuff)
 
-[https://github.com/delorenj/prompt-and-tag](https://github.com/delorenj/prompt-and-tag)
+</div>
 
-   Easily version, tag, and share your context windows across LLM providers.
+<!-- {:.bg-white.dark:bg-gray-800.rounded-lg.shadow-md.overflow-hidden} -->
+<div>
 
+![Prompt & Tag](prompt-and-tag/banner.png)
 
+#### Prompt & Tag
+
+Easily version, tag, and share your context windows across LLM providers.
+
+[View on GitHub](https://github.com/delorenj/prompt-and-tag)
+
+</div>
+
+</div>
+
+<!-- {:.section-transition} -->
 ### 🤝 Let's Connect!
 
 Always eager to discuss the latest in tech, AI integration, or your engineering challenges. Feel free to reach out!
