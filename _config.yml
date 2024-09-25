@@ -36,3 +36,7 @@ exclude:
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# Remote theme settings
+remote_theme: pages-themes/cayman@v0.2.0
+show_downloads: false
