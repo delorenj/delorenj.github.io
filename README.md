@@ -1,5 +1,5 @@
 # <img src="img/pixel_me/479.png" alt="Jarad DeLorenzo" width="100" style="vertical-align: middle;"> Jarad DeLorenzo
-## 👨‍💻 Staff Engineer | 🚀 Tech Innovator | 🤖 AI Enthusiast
+## 👨‍💻 Staff Engineer | 🚀 Tech Leader | 🤖 AI Enthusiast
 
 [![Visits Badge](https://badges.pufler.dev/visits/pujux/badge-it)](https://badges.pufler.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/delorenj/)
@@ -100,7 +100,3 @@ Led successful transition to microservices architecture
 ### 🤝 Let's Connect!
 
 Always eager to discuss the latest in tech, AI integration, or your engineering challenges. Feel free to reach out!
-
----
-
-⭐️ From [Jarad DeLorenzo](https://github.com/delorenj)
