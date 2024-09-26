@@ -1,0 +1,58 @@
+# Jekyll specific
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby gems
+.bundle/
+vendor/
+
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Node.js (if using any Node-based tools)
+node_modules/
+
+# Environment files
+.env
+
+# Build files
+dist/
+build/
+
+# Temporary files
+*.swp
+*~
+
+# IDE specific
+.vscode/
+.idea/
+
+# GitHub Pages specific
+.github-pages-token
+
+# Jekyll plugins
+_plugins/
+
+# Jekyll theme files (if not needed in the repo)
+# _layouts/
+# _includes/
+# _sass/
+
+# Jekyll data files (if not needed in the repo)
+# _data/
+
+# Jekyll collections (if not needed in the repo)
+# _posts/
+# _drafts/
+
+# Jekyll config files (if not needed in the repo)
+# _config.yml
+
+# Other common files to ignore
+*.bak
+*.tmp
+*.temp
