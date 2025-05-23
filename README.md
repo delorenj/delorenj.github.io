@@ -1,5 +1,5 @@
 # <img src="img/pixel_me/479.png" alt="Jarad DeLorenzo" width="100" style="vertical-align: middle;"> Jarad DeLorenzo
-## 👨‍💻 Staff Engineer | 🚀 Tech Leader | 🤖 AI Enthusiast
+## 🚀 Co-founder, IntelliForia | 🧠 Agentic Workflow Innovator | 🛠️ Creator, Common Project Framework
 
 [![Visits Badge](https://badges.pufler.dev/visits/pujux/badge-it)](https://badges.pufler.dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/delorenj/)
@@ -11,13 +11,21 @@
 
 ### 🌟 About Me
 
-I'm a Staff Engineer with 20+ years of experience driving technical excellence and delivering high-impact solutions. Currently spearheading AI developer workflow tools, integrations and microservices architecture @[Justworks](https://justworks.com) in downtown NYC.
+I'm the Co-founder of IntelliForia, an AI-driven ABA Service provider revolutionizing the space. With over 20 years of experience, I'm passionate about leveraging technology to create impactful solutions and drive innovation in AI and software development.
 
 - 🏗️ Expert in Software Architecture & System Design
 - 🌐 Microservices & Distributed Systems
 - ☁️ Cloud Platforms guru (AWS, Google Cloud)
 - 🤖 AI and Agentic workflows strategist
 - 👥 Passionate about Technical Leadership & Mentoring
+
+### 💡 Agentic Workflow Innovation
+
+I am a recognized thought-leader in Agentic Workflow Innovation, focusing on creating autonomous systems that streamline complex processes and enhance productivity. My work explores the intersection of AI, human-computer interaction, and process optimization to build the next generation of intelligent tools.
+
+### 🧩 Common Project Framework
+
+I am the creator of the Common Project Framework, a language, LLM, and tool-agnostic workflow designed for optimal LLM leveraging. This framework provides a standardized approach to building, deploying, and managing LLM-powered applications, ensuring consistency, scalability, and ease of integration across diverse development environments.
 
 ### 🛠️ Tech Stack
 
@@ -49,19 +57,19 @@ I'm a Staff Engineer with 20+ years of experience driving technical excellence a
 ![Langchain](https://img.shields.io/badge/-Langchain-000000?style=flat-square&logo=langchain&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/-Anthropic-000000?style=flat-square&logo=anthropic&logoColor=white)
 
-
 ### 🚀 Career Highlights
 
-<img src="https://cdn.brandfetch.io/justworks.com/logo/theme/dark/fallback/lettermark/h/100/w/100" />
+[IntelliForia Logo]
+  - Co-founder of IntelliForia, leading the development of an AI-driven platform to revolutionize ABA services.
 
+<img src="https://cdn.brandfetch.io/justworks.com/logo/theme/dark/fallback/lettermark/h/100/w/100" />
 
   - Architected multiple microservices in the Workforce Management and Time & Attendance space
   - Spearheaded the development of AI-powered developer workflows and integrations
 
 <img src="https://cdn.brandfetch.io/splashthat.com/logo/theme/dark/fallback/lettermark/h/90/w/90" />  
 
-- Led successful transition to microservices architecture
-Led successful transition to microservices architecture
+  - Led successful transition to microservices architecture
 
 <img src="https://cdn.brandfetch.io/classpass.com/logo/theme/dark/fallback/lettermark/h/140/w/140" />
 
@@ -76,9 +84,7 @@ Led successful transition to microservices architecture
 - 🎓 M.S. Software Engineering, Stevens Institute of Technology
 - 🎓 B.S. Computer Science & B.S. Mathematics, Drexel University
 
-
 ### 🌟 Open Source Projects
-
 
 <img src="https://delorenj.github.io/did-stuff/did-stuff-hero-dark.png" alt="Did Stuff" width="100%">
 
@@ -87,15 +93,12 @@ Led successful transition to microservices architecture
 
    A CLI tool that adds AI-generated commit messages to your git repositories.
    
-
 <img src="prompt-and-tag/banner.png" alt="Prompt & Tag" width="100%">
 
 ### Prompt & Tag
-
 [https://github.com/delorenj/prompt-and-tag](https://github.com/delorenj/prompt-and-tag)
 
    Easily version, tag, and share your context windows across LLM providers.
-
 
 ### 🤝 Let's Connect!
 
