@@ -1,0 +1,26 @@
+{
+  "name": "jarad-delorenzo-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website built with Jekyll and GitHub Pages",
+  "scripts": {
+    "develop": "npx serve . -l 8000",
+    "start": "npx serve . -l 8000",
+    "build": "echo 'Building Jekyll site - this would normally use bundle exec jekyll build'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delorenj/delorenj.github.io"
+  },
+  "keywords": [
+    "jekyll",
+    "github-pages",
+    "portfolio",
+    "static-site"
+  ],
+  "author": "Jarad DeLorenzo",
+  "license": "MIT"
+}
