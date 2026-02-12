@@ -59,5 +59,25 @@ if (footer) {
     footer.innerHTML = footer.innerHTML.replace('2026', new Date().getFullYear());
 }
 
+// Floating schedule button visibility
+const floatingSchedule = document.getElementById('floatingSchedule');
+const heroSection = document.getElementById('hero');
+
+function updateFloatingButton() {
+    if (!floatingSchedule || !heroSection) return;
+    
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    const scrollPosition = window.pageYOffset;
+    
+    if (scrollPosition > heroBottom - 200) {
+        floatingSchedule.classList.add('visible');
+    } else {
+        floatingSchedule.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', updateFloatingButton);
+window.addEventListener('load', updateFloatingButton);
+
 console.log('🚀 Jarad DeLorenzo - Agentic Systems Architect');
 console.log('💡 Built with intention, not templates.');

@@ -393,6 +393,21 @@ a:hover {
 }
 
 /* Open Source Section */
+.opensource-category {
+    margin-bottom: 4rem;
+}
+
+.opensource-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
 .opensource-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -414,15 +429,44 @@ a:hover {
     box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
 }
 
+.opensource-card.featured-repo {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%);
+    border: 2px solid var(--accent-primary);
+}
+
 .opensource-card h4 {
     color: var(--text-primary);
     margin-bottom: 0.75rem;
     font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .opensource-card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.stars {
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    font-family: var(--font-sans);
+}
+
+.repo-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.fork-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
 }
 
 /* Contact Section */
@@ -446,6 +490,37 @@ a:hover {
     color: var(--text-secondary);
     margin-bottom: 3rem;
     line-height: 1.7;
+}
+
+.contact-cta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn-schedule {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 18px 36px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+}
+
+.btn-schedule:hover {
+    background: var(--accent-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.4);
+}
+
+.schedule-icon {
+    font-size: 1.5rem;
 }
 
 .contact-methods {
@@ -497,6 +572,47 @@ a:hover {
 
 .social-links .dot {
     color: var(--border-color);
+}
+
+/* Floating Schedule Button */
+.floating-schedule {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 16px 24px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 25px rgba(0, 255, 136, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.floating-schedule.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-schedule:hover {
+    background: var(--accent-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(0, 255, 136, 0.5);
+}
+
+.floating-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.floating-text {
+    font-weight: 600;
 }
 
 /* Footer */
@@ -579,6 +695,36 @@ footer {
     .contact-button {
         width: 100%;
         justify-content: center;
+    }
+    
+    .btn-schedule {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 16px 28px;
+    }
+    
+    .floating-schedule {
+        bottom: 20px;
+        right: 20px;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .floating-text {
+        display: none;
+    }
+    
+    .floating-schedule {
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .floating-icon {
+        font-size: 1.75rem;
     }
 }
 
