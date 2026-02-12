@@ -316,5 +316,34 @@ window.addEventListener('load', updateFloatingButton);
 })();
 
 
+// ============================================
+// Blog Gallery: 3D Tilt Effect on Hover
+// ============================================
+
+(function () {
+    const blogCards = document.querySelectorAll('.blog-card');
+    
+    blogCards.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            this.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    });
+})();
+
+
 console.log('🚀 Jarad DeLorenzo - Agentic Systems Architect');
 console.log('💡 Built with intention, not templates.');
