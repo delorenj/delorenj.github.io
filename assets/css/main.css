@@ -245,29 +245,135 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* Projects Section */
+/* ============================================
+   Work Section — Scroll-Driven Video Showcase
+   ============================================ */
+
+#work {
+    position: relative;
+    padding: 0;
+    border-bottom: none;
+    overflow: visible;
+}
+
+/* Fixed video background — visible only within #work bounds */
+.work-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.work-video-bg.visible {
+    opacity: 1;
+}
+
+.work-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.work-video.work-video-active {
+    opacity: 1;
+}
+
+.work-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.7);
+    z-index: 1;
+}
+
+.work-gradient-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 0;
+    background-size: 400% 400%;
+    animation: gradientDrift 15s ease infinite;
+}
+
+.work-gradient-fallback.active {
+    opacity: 1;
+}
+
+/* Work container sits above video */
+.work-container {
+    position: relative;
+    z-index: 2;
+}
+
+.work-section-header {
+    padding-top: var(--section-padding);
+    padding-bottom: 2rem;
+}
+
+/* Projects — vertical scroll slides */
 .projects {
-    display: grid;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .project-card {
-    background: var(--bg-secondary);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    opacity: 0.3;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(20px);
+    position: relative;
+}
+
+.project-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-inner {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 2.5rem;
-    transition: all 0.3s ease;
+    padding: 3rem;
+    transition: all 0.4s ease;
 }
 
-.project-card:hover {
-    border-color: var(--accent-primary);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
+.project-card.active .project-inner {
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 136, 0.05);
 }
 
-.project-card.featured {
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%);
+.project-card.featured .project-inner {
     border: 2px solid var(--accent-primary);
+    background: rgba(0, 255, 136, 0.03);
+}
+
+.project-card.featured.active .project-inner {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 136, 0.1);
 }
 
 .project-header {
@@ -281,7 +387,7 @@ a:hover {
 
 .project-header h3 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .project-tag {
@@ -308,7 +414,7 @@ a:hover {
 
 .tech-badge {
     padding: 6px 14px;
-    background: var(--bg-tertiary);
+    background: rgba(26, 26, 26, 0.8);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 0.85rem;
@@ -330,6 +436,64 @@ a:hover {
 .project-link:hover {
     color: var(--accent-hover);
     transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-tertiary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-dot.active {
+    background: var(--accent-primary);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+    transform: scale(1.3);
+}
+
+.scroll-arrow {
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+    animation: bounceDown 2s ease infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* Last card — add bottom padding so it scrolls out */
+.project-card:last-child {
+    margin-bottom: 4rem;
 }
 
 /* Writing Section */
@@ -392,71 +556,6 @@ a:hover {
     transform: translateX(4px);
 }
 
-/* Open Source Section - Video Background */
-#opensource {
-    position: relative;
-    overflow: hidden;
-}
-
-.os-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.os-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.os-video.os-video-active {
-    opacity: 1;
-}
-
-.os-video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.75);
-    z-index: 1;
-}
-
-.os-gradient-fallback {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    background: linear-gradient(
-        135deg,
-        #0a0a0a 0%,
-        #0d1a12 25%,
-        #0a0a0a 50%,
-        #0a1520 75%,
-        #0a0a0a 100%
-    );
-    background-size: 400% 400%;
-    animation: gradientDrift 15s ease infinite;
-    z-index: 0;
-}
-
-.os-gradient-fallback.active {
-    opacity: 1;
-}
-
 @keyframes gradientDrift {
     0% { background-position: 0% 50%; }
     25% { background-position: 100% 0%; }
@@ -465,9 +564,9 @@ a:hover {
     100% { background-position: 0% 50%; }
 }
 
-#opensource > .container {
-    position: relative;
-    z-index: 2;
+/* Open Source Section */
+#opensource {
+    background: var(--bg-secondary);
 }
 
 /* Open Source Section - Selectable Cards */
@@ -768,11 +867,34 @@ footer {
     }
     
     .project-card {
+        min-height: 70vh;
+        padding: 2rem 0;
+    }
+    
+    .project-inner {
         padding: 1.5rem;
     }
     
     .project-header h3 {
         font-size: 1.5rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+    
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    .scroll-indicator {
+        right: 16px;
+    }
+    
+    .scroll-dot {
+        width: 6px;
+        height: 6px;
     }
     
     .writing-link {

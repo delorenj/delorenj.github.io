@@ -93,81 +93,108 @@
 
     <!-- What I Build Section -->
     <section id="work">
-        <div class="container">
-            <div class="section-header">
+        <!-- Video Background (fixed, clipped to #work) -->
+        <div class="work-video-bg" id="workVideoBg">
+            <video class="work-video work-video-active" id="workVideo1" muted loop playsinline></video>
+            <video class="work-video" id="workVideo2" muted loop playsinline></video>
+            <div class="work-video-overlay"></div>
+            <div class="work-gradient-fallback" id="workGradientFallback"></div>
+        </div>
+
+        <div class="container work-container">
+            <div class="section-header work-section-header">
                 <span class="section-label">What I Build</span>
                 <h2>Production systems, not demos.</h2>
             </div>
             
             <div class="projects">
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <h3>33GOD</h3>
-                        <span class="project-tag">Agentic Orchestration Platform</span>
-                    </div>
-                    <p class="project-description">
-                        A 17+ microservice agentic orchestration pipeline with event-driven architecture and multi-agent coordination. Not a toy—production-grade infrastructure for building AI systems that actually scale.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Yi Agent Framework</span>
-                        <span class="tech-badge">Flume (Routing)</span>
-                        <span class="tech-badge">Bloodbank (Event Bus)</span>
-                        <span class="tech-badge">Python + FastAPI</span>
-                        <span class="tech-badge">RAG Pipelines</span>
-                        <span class="tech-badge">Multi-Agent Coordination</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/delorenj/33GOD" target="_blank" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Intelliforia</h3>
-                        <span class="project-tag">Healthcare AI Platform — Funded</span>
-                    </div>
-                    <p class="project-description">
-                        AI-powered Chrome extension for healthcare EMR systems, already in use by hundreds of clinics. Bringing intelligent automation to medical workflows without sacrificing control or auditability.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Chrome Extension</span>
-                        <span class="tech-badge">LLM Integration</span>
-                        <span class="tech-badge">Healthcare Compliance</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.linkedin.com/company/intelliforia" target="_blank" class="project-link">LinkedIn →</a>
+                <div class="project-card featured" data-video="33GOD" data-gradient="linear-gradient(135deg, rgba(0,255,136,0.15) 0%, rgba(0,136,255,0.08) 50%, rgba(0,255,136,0.05) 100%)">
+                    <div class="project-inner">
+                        <div class="project-header">
+                            <h3>33GOD</h3>
+                            <span class="project-tag">Agentic Orchestration Platform</span>
+                        </div>
+                        <p class="project-description">
+                            A 17+ microservice agentic orchestration pipeline with event-driven architecture and multi-agent coordination. Not a toy—production-grade infrastructure for building AI systems that actually scale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Yi Agent Framework</span>
+                            <span class="tech-badge">Flume (Routing)</span>
+                            <span class="tech-badge">Bloodbank (Event Bus)</span>
+                            <span class="tech-badge">Python + FastAPI</span>
+                            <span class="tech-badge">RAG Pipelines</span>
+                            <span class="tech-badge">Multi-Agent Coordination</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/delorenj/33GOD" target="_blank" class="project-link">View on GitHub →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>GOD Docs</h3>
-                        <span class="project-tag">Documentation Infrastructure</span>
-                    </div>
-                    <p class="project-description">
-                        Guaranteed Organizational Documents—deterministic documentation freshness enforcement. Because stale docs are worse than no docs.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Documentation as Code</span>
-                        <span class="tech-badge">Automated Validation</span>
-                        <span class="tech-badge">Freshness Guarantees</span>
+                <div class="project-card" data-video="Intelliforia" data-gradient="linear-gradient(160deg, rgba(0,136,255,0.15) 0%, rgba(128,0,255,0.08) 50%, rgba(0,136,255,0.05) 100%)">
+                    <div class="project-inner">
+                        <div class="project-header">
+                            <h3>Intelliforia</h3>
+                            <span class="project-tag">Healthcare AI Platform — Funded</span>
+                        </div>
+                        <p class="project-description">
+                            AI-powered Chrome extension for healthcare EMR systems, already in use by hundreds of clinics. Bringing intelligent automation to medical workflows without sacrificing control or auditability.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Chrome Extension</span>
+                            <span class="tech-badge">LLM Integration</span>
+                            <span class="tech-badge">Healthcare Compliance</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/company/intelliforia" target="_blank" class="project-link">LinkedIn →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Common Project Framework</h3>
-                        <span class="project-tag">Consulting Methodology</span>
-                    </div>
-                    <p class="project-description">
-                        A methodology for treating AI as a scalable capability, not just a collection of tools. Aligns business outcomes, system architecture, and agentic workflows under a single project model.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Process Framework</span>
-                        <span class="tech-badge">AI Strategy</span>
-                        <span class="tech-badge">Team Enablement</span>
+                <div class="project-card" data-video="GOD-Docs" data-gradient="linear-gradient(200deg, rgba(255,136,0,0.12) 0%, rgba(255,68,0,0.06) 50%, rgba(255,136,0,0.03) 100%)">
+                    <div class="project-inner">
+                        <div class="project-header">
+                            <h3>GOD Docs</h3>
+                            <span class="project-tag">Documentation Infrastructure</span>
+                        </div>
+                        <p class="project-description">
+                            Guaranteed Organizational Documents—deterministic documentation freshness enforcement. Because stale docs are worse than no docs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Documentation as Code</span>
+                            <span class="tech-badge">Automated Validation</span>
+                            <span class="tech-badge">Freshness Guarantees</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="project-card" data-video="CPF" data-gradient="linear-gradient(170deg, rgba(255,0,136,0.12) 0%, rgba(136,0,255,0.06) 50%, rgba(255,0,136,0.03) 100%)">
+                    <div class="project-inner">
+                        <div class="project-header">
+                            <h3>Common Project Framework</h3>
+                            <span class="project-tag">Consulting Methodology</span>
+                        </div>
+                        <p class="project-description">
+                            A methodology for treating AI as a scalable capability, not just a collection of tools. Aligns business outcomes, system architecture, and agentic workflows under a single project model.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Process Framework</span>
+                            <span class="tech-badge">AI Strategy</span>
+                            <span class="tech-badge">Team Enablement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" id="workScrollIndicator">
+                <div class="scroll-dots">
+                    <span class="scroll-dot active" data-index="0"></span>
+                    <span class="scroll-dot" data-index="1"></span>
+                    <span class="scroll-dot" data-index="2"></span>
+                    <span class="scroll-dot" data-index="3"></span>
+                </div>
+                <span class="scroll-arrow">↓</span>
             </div>
         </div>
     </section>
@@ -203,13 +230,6 @@
 
     <!-- Open Source Section -->
     <section id="opensource">
-        <!-- Video Background -->
-        <div class="os-video-bg">
-            <video class="os-video os-video-active" id="osVideo1" muted loop playsinline></video>
-            <video class="os-video" id="osVideo2" muted loop playsinline></video>
-            <div class="os-video-overlay"></div>
-            <div class="os-gradient-fallback"></div>
-        </div>
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Open Source</span>
