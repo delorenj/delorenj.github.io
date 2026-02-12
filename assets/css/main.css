@@ -536,7 +536,6 @@ a:hover {
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 2rem;
     position: relative;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -544,29 +543,35 @@ a:hover {
     perspective: 1000px;
 }
 
-/* Gradient backgrounds per card */
-.blog-card[data-gradient="0"] {
-    background: linear-gradient(135deg, rgba(88, 0, 180, 0.15) 0%, rgba(0, 136, 255, 0.08) 50%, rgba(88, 0, 180, 0.05) 100%);
+/* Full-bleed banner background */
+.blog-card-bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--card-bg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+    opacity: 0.55;
 }
 
-.blog-card[data-gradient="1"] {
-    background: linear-gradient(135deg, rgba(0, 136, 255, 0.15) 0%, rgba(0, 255, 136, 0.08) 50%, rgba(0, 136, 255, 0.05) 100%);
+.blog-card:hover .blog-card-bg {
+    transform: scale(1.08);
+    opacity: 0.35;
 }
 
-.blog-card[data-gradient="2"] {
-    background: linear-gradient(135deg, rgba(0, 180, 88, 0.15) 0%, rgba(0, 136, 255, 0.08) 50%, rgba(0, 180, 88, 0.05) 100%);
-}
-
-.blog-card[data-gradient="3"] {
-    background: linear-gradient(135deg, rgba(136, 0, 255, 0.15) 0%, rgba(255, 0, 136, 0.08) 50%, rgba(136, 0, 255, 0.05) 100%);
-}
-
-.blog-card[data-gradient="4"] {
-    background: linear-gradient(135deg, rgba(0, 136, 180, 0.15) 0%, rgba(88, 0, 180, 0.08) 50%, rgba(0, 136, 180, 0.05) 100%);
-}
-
-.blog-card[data-gradient="5"] {
-    background: linear-gradient(135deg, rgba(180, 88, 0, 0.15) 0%, rgba(255, 136, 0, 0.08) 50%, rgba(180, 88, 0, 0.05) 100%);
+/* Dark gradient overlay for text readability */
+.blog-card-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(10, 10, 10, 0.95) 0%,
+        rgba(10, 10, 10, 0.7) 40%,
+        rgba(10, 10, 10, 0.3) 100%
+    );
+    z-index: 1;
 }
 
 .blog-card-inner {
@@ -575,6 +580,8 @@ a:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
 }
 
 .blog-card:hover {
