@@ -79,5 +79,115 @@ function updateFloatingButton() {
 window.addEventListener('scroll', updateFloatingButton);
 window.addEventListener('load', updateFloatingButton);
 
+// ============================================
+// Open Source Section: Selectable Cards + Video Background
+// ============================================
+
+(function () {
+    const osSection = document.getElementById('opensource');
+    if (!osSection) return;
+
+    const video1 = document.getElementById('osVideo1');
+    const video2 = document.getElementById('osVideo2');
+    const gradientFallback = osSection.querySelector('.os-gradient-fallback');
+    const allCards = osSection.querySelectorAll('.opensource-card[data-repo]');
+
+    let activeVideo = video1;
+    let standbyVideo = video2;
+    let currentRepo = null;
+    let sectionVisible = false;
+
+    // --- Card Selection ---
+    allCards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            // Allow cmd/ctrl+click to still open links
+            if (e.metaKey || e.ctrlKey) return;
+            e.preventDefault();
+
+            const repo = this.dataset.repo;
+            if (!repo) return;
+
+            // Deactivate all cards, activate this one
+            allCards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+
+            // Swap video
+            if (repo !== currentRepo) {
+                loadAndCrossfade(repo);
+            }
+        });
+    });
+
+    // --- Video Loading & Crossfade ---
+    function getVideoPath(repo) {
+        return 'assets/videos/' + repo + '.webm';
+    }
+
+    function loadAndCrossfade(repo) {
+        const path = getVideoPath(repo);
+
+        // Check if video exists via HEAD request
+        fetch(path, { method: 'HEAD' })
+            .then(res => {
+                if (!res.ok) throw new Error('404');
+                // Video exists — load it
+                standbyVideo.src = path;
+                standbyVideo.load();
+                standbyVideo.oncanplay = function () {
+                    standbyVideo.play().catch(() => {});
+                    // Crossfade
+                    standbyVideo.classList.add('os-video-active');
+                    activeVideo.classList.remove('os-video-active');
+                    gradientFallback.classList.remove('active');
+
+                    // After transition, pause old video
+                    setTimeout(() => {
+                        activeVideo.pause();
+                        activeVideo.removeAttribute('src');
+                        activeVideo.load();
+                        // Swap references
+                        const tmp = activeVideo;
+                        activeVideo = standbyVideo;
+                        standbyVideo = tmp;
+                    }, 900);
+
+                    standbyVideo.oncanplay = null;
+                };
+                currentRepo = repo;
+            })
+            .catch(() => {
+                // Video doesn't exist — show gradient fallback
+                activeVideo.classList.remove('os-video-active');
+                activeVideo.pause();
+                gradientFallback.classList.add('active');
+                currentRepo = repo;
+            });
+    }
+
+    // --- Intersection Observer: play/pause on scroll ---
+    const osObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sectionVisible = true;
+                // Start default video if nothing loaded yet
+                if (!currentRepo) {
+                    const defaultCard = osSection.querySelector('.opensource-card.active');
+                    const defaultRepo = defaultCard ? defaultCard.dataset.repo : '33GOD';
+                    loadAndCrossfade(defaultRepo);
+                } else {
+                    // Resume playing
+                    activeVideo.play().catch(() => {});
+                }
+            } else {
+                sectionVisible = false;
+                video1.pause();
+                video2.pause();
+            }
+        });
+    }, { threshold: 0.1 });
+
+    osObserver.observe(osSection);
+})();
+
 console.log('🚀 Jarad DeLorenzo - Agentic Systems Architect');
 console.log('💡 Built with intention, not templates.');
